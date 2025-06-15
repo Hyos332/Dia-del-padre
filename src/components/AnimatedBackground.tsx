@@ -31,6 +31,10 @@ const BackgroundContainer = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background: linear-gradient(-45deg, #a8e6cf, #dcedc1, #ffd3b6, #ffaaa5);
   background-size: 400% 400%;
   animation: ${gradientAnimation} 15s ease infinite;
@@ -52,7 +56,7 @@ const Particle = styled.div<{ size: number; left: number; delay: number }>`
 `;
 
 const AnimatedBackground: React.FC = () => {
-  const particles = Array.from({ length: 15 }, (_, index) => ({
+  const particles = Array.from({ length: 15 }, () => ({
     size: Math.random() * 8 + 4,
     left: Math.random() * 100,
     delay: Math.random() * 2
@@ -72,4 +76,4 @@ const AnimatedBackground: React.FC = () => {
   );
 };
 
-export default AnimatedBackground; 
+export default AnimatedBackground;

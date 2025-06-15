@@ -201,7 +201,7 @@ const FathersDayMessage: React.FC = () => {
     }
   };
 
-  const handleStart = (name: string) => {
+  const handleStart = () => {
     setGameStarted(true);
   };
 
@@ -218,7 +218,7 @@ const FathersDayMessage: React.FC = () => {
   };
 
   if (!gameStarted) {
-    return <WelcomeScreen onStart={() => handleStart('JOSE LUIS HOYOS')} />;
+    return <WelcomeScreen onStart={handleStart} />;
   }
 
   if (showMessageRain) {

@@ -143,6 +143,7 @@ const Button = styled.button`
   }
 `;
 
+// @ts-ignore
 const shine = keyframes`
   0% {
     transform: translateX(-100%) rotate(45deg);
@@ -159,13 +160,6 @@ interface WelcomeScreenProps {
 const WelcomeScreen: React.FC<WelcomeScreenProps> = ({ onStart }) => {
   const [showBlocked, setShowBlocked] = useState(false);
   const [hasTyped, setHasTyped] = useState(false);
-
-  // Workaround para satisfacer el linter de Vercel que marca 'shine' como no leído.
-  // 'shine' se usa en el styled-component Button, pero el linter a veces no lo detecta.
-  // Esta línea asegura que el linter vea que 'shine' es referenciado.
-  if (process.env.NODE_ENV !== 'production') {
-    console.log(shine);
-  }
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (!hasTyped) {

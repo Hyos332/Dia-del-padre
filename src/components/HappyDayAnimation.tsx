@@ -113,7 +113,7 @@ interface HappyDayAnimationProps {
 const HappyDayAnimation: React.FC<HappyDayAnimationProps> = ({ onAnimationComplete }) => {
   const colors = ['#FFD700', '#FF69B4', '#8A2BE2', '#00CED1', '#FF4500']; // Más colores
 
-  const particles = Array.from({ length: 50 }, (_, index) => ({
+  const particles = Array.from({ length: 50 }, () => ({
     size: Math.random() * 10 + 5,
     x: 50 + (Math.random() - 0.5) * 40,
     y: 50 + (Math.random() - 0.5) * 40,
