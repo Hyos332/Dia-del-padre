@@ -155,7 +155,7 @@ const MessageRain: React.FC<MessageRainProps> = ({ messages, onAnimationComplete
   const [currentBigTextIndex, setCurrentBigTextIndex] = useState(0);
 
   useEffect(() => {
-    let rainTimer: NodeJS.Timeout;
+    let rainTimer: ReturnType<typeof setTimeout>;
     let messageCount = 0;
 
     const startRain = () => {

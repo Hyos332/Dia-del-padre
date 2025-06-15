@@ -148,7 +148,6 @@ const FathersDayMessage: React.FC = () => {
   const [titleHovered, setTitleHovered] = useState(false);
   const [hearts, setHearts] = useState<{ id: number; x: number; y: number }[]>([]);
   const [currentMessageIndex, setCurrentMessageIndex] = useState(0);
-  const [fatherName, setFatherName] = useState('');
   const [gameStarted, setGameStarted] = useState(false);
   const [flyingMessages, setFlyingMessages] = useState<{ id: number; message: string; x: number; y: number }[]>([]);
   const [showFinalScreen, setShowFinalScreen] = useState(false);
@@ -203,7 +202,6 @@ const FathersDayMessage: React.FC = () => {
   };
 
   const handleStart = (name: string) => {
-    setFatherName(name);
     setGameStarted(true);
   };
 
@@ -220,7 +218,7 @@ const FathersDayMessage: React.FC = () => {
   };
 
   if (!gameStarted) {
-    return <WelcomeScreen onStart={handleStart} />;
+    return <WelcomeScreen onStart={() => handleStart('JOSE LUIS HOYOS')} />;
   }
 
   if (showMessageRain) {

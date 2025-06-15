@@ -1,4 +1,3 @@
-import React from 'react';
 import FathersDayMessage from './components/FathersDayMessage';
 import { createGlobalStyle } from 'styled-components';
 

@@ -10,17 +10,6 @@ const fadeIn = keyframes`
   }
 `;
 
-const scaleIn = keyframes`
-  from {
-    transform: scale(0);
-    opacity: 0;
-  }
-  to {
-    transform: scale(1);
-    opacity: 1;
-  }
-`;
-
 const burst = keyframes`
   0% {
     transform: scale(0);
@@ -124,7 +113,7 @@ interface HappyDayAnimationProps {
 const HappyDayAnimation: React.FC<HappyDayAnimationProps> = ({ onAnimationComplete }) => {
   const colors = ['#FFD700', '#FF69B4', '#8A2BE2', '#00CED1', '#FF4500']; // Más colores
 
-  const particles = Array.from({ length: 50 }, (_, i) => ({
+  const particles = Array.from({ length: 50 }, (_, index) => ({
     size: Math.random() * 10 + 5,
     x: 50 + (Math.random() - 0.5) * 40,
     y: 50 + (Math.random() - 0.5) * 40,

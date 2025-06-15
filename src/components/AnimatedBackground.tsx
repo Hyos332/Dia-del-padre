@@ -52,7 +52,7 @@ const Particle = styled.div<{ size: number; left: number; delay: number }>`
 `;
 
 const AnimatedBackground: React.FC = () => {
-  const particles = Array.from({ length: 15 }, (_, i) => ({
+  const particles = Array.from({ length: 15 }, (_, index) => ({
     size: Math.random() * 8 + 4,
     left: Math.random() * 100,
     delay: Math.random() * 2

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import styled, { keyframes } from 'styled-components';
 import JuanValdezImage from '../assets/juan_valdez.png'; // Asegúrate de que la ruta sea correcta
 
@@ -8,21 +8,6 @@ const fadeIn = keyframes`
   }
   to {
     opacity: 1;
-  }
-`;
-
-const slideInText = keyframes`
-  0% {
-    transform: translateX(-100%) rotate(-10deg);
-    opacity: 0;
-  }
-  50% {
-    transform: translateX(0) rotate(0deg);
-    opacity: 1;
-  }
-  100% {
-    transform: translateX(100%) rotate(10deg);
-    opacity: 0;
   }
 `;
 
